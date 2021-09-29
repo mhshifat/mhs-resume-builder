@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaChrome, FaEnvelope, FaFacebookF, FaGithub, FaLinkedinIn, FaMinus, FaPhone, FaPlus } from "react-icons/fa";
+import SampleTemplateTag from "../components/shared/SampleTemplateTag";
 
 export default function Build() {
   const [profile, setProfile] = useState("");
@@ -132,6 +133,24 @@ export default function Build() {
                   <input placeholder="School" />
                   <input placeholder="From - Until" />
                 </div>
+              </div>
+            </div>
+            <br />
+            <div>
+              <input className="sampleTemplateH3" placeholder="Custom Title" />
+              <div className="sampleTemplateTags">
+                {new Array(1).fill("").map((_, tagInd) => (
+                  <SampleTemplateTag key={tagInd} />
+                ))}
+              </div>
+            </div>
+            <br />
+            <div>
+              <input className="sampleTemplateH3" placeholder="Custom Title" />
+              <div className="sampleTemplateTags">
+                {new Array(1).fill("").map((_, tagInd) => (
+                  <SampleTemplateTag key={tagInd} />
+                ))}
               </div>
             </div>
           </div>

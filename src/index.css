@@ -111,6 +111,7 @@ textarea {
 }
 
 .input:focus,
+.sampleTemplateTags input:focus,
 .sampleTemplateExpEdu input:focus,
 .sampleTemplateP:focus,
 .sampleTemplateH5:focus,
@@ -272,4 +273,56 @@ textarea {
 
 .sampleTemplateExpEdu.edu::after {
   height: 80%;
+}
+
+.sampleTemplateTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.sampleTemplateTag input {
+  border: none;
+  outline: none;
+  font-family: var(--primaryFont);
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: background 250ms ease-in-out;
+  color: var(--headingColor);
+  width: 11ch;
+}
+
+.sampleTemplateTag {
+  position: relative;
+}
+
+.sampleTemplateTag__menus {
+  position: absolute;
+  top: -1.5rem;
+  right: -1rem;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+.sampleTemplateTag__menus > button {
+  margin-left: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: var(--primaryColor);
+  color: var(--headingColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sampleTemplateTag:hover .sampleTemplateTag__menus {
+  opacity: 1;
+  pointer-events: all;
 }
