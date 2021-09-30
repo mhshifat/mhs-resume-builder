@@ -326,3 +326,88 @@ textarea {
   opacity: 1;
   pointer-events: all;
 }
+
+.sampleTemplateCircleSkills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.sampleTemplateCircleSkill {
+  display: flex;
+  align-items: center;
+  border: 2px dashed transparent;
+  padding: 1rem;
+  transition: all 250ms ease-in-out;
+  position: relative;
+  user-select: none;
+}
+
+.sampleTemplateCircleSkill__circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.sampleTemplateCircleSkill__circle > span {
+  position: absolute;
+  top: 48%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.sampleTemplateCircleSkill__circle > svg {
+  width: 58px;
+  height: 58px;
+  transform: rotate(-90deg);
+}
+
+.sampleTemplateCircleSkill__circle > svg > circle {
+  fill: transparent;
+  stroke: var(--primaryColor);
+  stroke-width: 5px;
+  stroke-dasharray: 160;
+}
+
+.sampleTemplateCircleSkill__circle > svg > circle:first-child {
+  stroke-dashoffset: 0;
+  opacity: .5;
+}
+
+.sampleTemplateCircleSkill:hover {
+  border: 2px dashed rgb(124, 124, 124, .4);
+}
+
+.sampleTemplateCircleSkill__menus {
+  position: absolute;
+  top: -1.5rem;
+  right: -1rem;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+.sampleTemplateCircleSkill__menus > button {
+  margin-left: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: var(--primaryColor);
+  color: var(--headingColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sampleTemplateCircleSkill:hover .sampleTemplateCircleSkill__menus {
+  opacity: 1;
+  pointer-events: all;
+}
