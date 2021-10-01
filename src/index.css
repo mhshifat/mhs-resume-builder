@@ -411,3 +411,74 @@ textarea {
   opacity: 1;
   pointer-events: all;
 }
+
+.sampleTemplateBarSkills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.sampleTemplateBarSkill {
+  display: flex;
+  align-items: center;
+  border: 2px dashed transparent;
+  padding: 1rem;
+  transition: all 250ms ease-in-out;
+  position: relative;
+  user-select: none;
+}
+
+.sampleTemplateBarSkill:hover {
+  border: 2px dashed rgb(124, 124, 124, .4);
+}
+
+.sampleTemplateBarSkill__bars {
+  display: flex;
+  gap: .7rem;
+  margin-right: 1rem;
+}
+
+.sampleTemplateBarSkill__bars > span {
+  display: block;
+  width: 4rem;
+  height: 7px;
+  background: #0773E8;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+.sampleTemplateBarSkill__bars > span:hover {
+  opacity: .5 !important;
+}
+
+.sampleTemplateBarSkill__menus {
+  position: absolute;
+  top: -1.5rem;
+  right: -1rem;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+.sampleTemplateBarSkill__menus > button {
+  margin-left: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: var(--primaryColor);
+  color: var(--headingColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sampleTemplateBarSkill:hover .sampleTemplateBarSkill__menus {
+  opacity: 1;
+  pointer-events: all;
+}

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FaChrome, FaEnvelope, FaFacebookF, FaGithub, FaLinkedinIn, FaMinus, FaPhone, FaPlus } from "react-icons/fa";
+import SampleTemplateBarSkill from "../components/shared/SampleTemplateBarSkill";
 import SampleTemplateCircularSkill from "../components/shared/SampleTemplateCircularSkill";
 import SampleTemplateTag from "../components/shared/SampleTemplateTag";
 
@@ -160,6 +161,15 @@ export default function Build() {
               <div className="sampleTemplateCircleSkills">
                 {new Array(2).fill("").map((_, tagInd) => (
                   <SampleTemplateCircularSkill key={tagInd} />
+                ))}
+              </div>
+            </div>
+            <br />
+            <div>
+              <input className="sampleTemplateH3" placeholder="Custom Title" />
+              <div className="sampleTemplateBarSkills">
+                {new Array(2).fill("").map((_, tagInd) => (
+                  <SampleTemplateBarSkill key={tagInd} />
                 ))}
               </div>
             </div>
