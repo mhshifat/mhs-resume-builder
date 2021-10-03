@@ -555,3 +555,20 @@ textarea {
   opacity: 1;
   pointer-events: all;
 }
+
+.sampleTemplateTextarea {
+  height: 3rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: var(--primaryFont);
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: background 250ms ease-in-out;
+  color: var(--headingColor);
+  resize: none;
+}
+
+.sampleTemplateTextarea:focus {
+  background: #f2f5f7;
+}
