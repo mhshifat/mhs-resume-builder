@@ -121,6 +121,41 @@ export const templates = [
         ]
       },
     },
-    settings: {},
+    settings: {
+      general: {
+        color: "",
+        typography: "",
+        text_size: "",
+      },
+      template: {
+        profile: true,
+        personal_info: {
+          address: true,
+          dob: true,
+          nationality: true,
+          martial_status: true,
+        },
+        contact: {
+          email: true,
+          phone: true,
+          website: true,
+          linkedin: true,
+          facebook: true,
+          github: true,
+        },
+        work_experiences: true,
+        educations: true,
+        skills: {
+          simple1: true,
+          simple2: true,
+          circles: true,
+          bars: true,
+        },
+        additional_info: {
+          list1: true,
+          list2: true,
+        },
+      }
+    },
   }
 ];
