@@ -6,7 +6,7 @@ function Textarea({ ...rest }, ref) {
     target.style.height = target.scrollHeight + 'px';
   }, []);
 
-  return <textarea {...rest} onKeyUp={handleKeyUp} />
+  return <textarea {...rest} onKeyUp={handleKeyUp} ref={ref} />
 }
 
 export default React.forwardRef(Textarea);

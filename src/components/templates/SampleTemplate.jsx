@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useMemo } from "react";
+import { useForm } from "react-hook-form";
 import SampleTemplateBarSkills from "../shared/SampleTemplateBarSkills";
 import SampleTemplateCircularSkills from "../shared/SampleTemplateCircularSkills";
 import SampleTemplateContact from "../shared/SampleTemplateContact";
@@ -10,33 +11,39 @@ import SampleTemplateProfile from "../shared/SampleTemplateProfile";
 import SampleTemplateTags from "../shared/SampleTemplateTags";
 import SampleTemplateWorkExperience from "../shared/SampleTemplateWorkExperience";
 
-export default function SampleTemplate({ name }) {
+export default function SampleTemplate({ data }) {
+  const { register, watch, control, setValue } = useForm({
+    defaultValues: useMemo(() => data, [data])
+  });
+  
+  console.log(watch());
+
   return (
     <Fragment>
-      <SampleTemplateHeader />
+      <SampleTemplateHeader register={register} />
       <br />
       <br />
       <div className="sampleTemplateRow">
         <div className="sampleTemplateLeft">
-          <SampleTemplateProfile />
-          <SampleTemplatePersonalDetails />
+          <SampleTemplateProfile register={register} />
+          <SampleTemplatePersonalDetails register={register} />
           <br />
-          <SampleTemplateContact />
+          <SampleTemplateContact register={register} />
         </div>
         <div className="sampleTemplateRight">
-          <SampleTemplateWorkExperience />
+          <SampleTemplateWorkExperience control={control} register={register} />
           <br />
-          <SampleTemplateEducations />
+          <SampleTemplateEducations control={control} register={register} />
           <br />
-          <SampleTemplateTags />
+          <SampleTemplateTags name="simple1" control={control} register={register} />
           <br />
-          <SampleTemplateTags />
+          <SampleTemplateTags name="simple2" control={control} register={register} />
           <br />
-          <SampleTemplateCircularSkills />
+          <SampleTemplateCircularSkills setValue={setValue} control={control} register={register} />
           <br />
-          <SampleTemplateBarSkills />
+          <SampleTemplateBarSkills setValue={setValue} control={control} register={register} />
           <br />
-          <SampleTemplateLists />
+          <SampleTemplateLists control={control} register={register} />
         </div>
       </div>
     </Fragment>
