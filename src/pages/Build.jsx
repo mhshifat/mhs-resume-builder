@@ -14,7 +14,7 @@ export default function Build() {
       <div className="buildWrapper__container">
         <Component {...rest} />
       </div>
-      <SettingsFab />
+      <SettingsFab generalSettings={rest.settings.general} />
     </div>
   )
 }

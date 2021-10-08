@@ -123,9 +123,9 @@ export const templates = [
     },
     settings: {
       general: {
-        color: "",
-        typography: "",
-        text_size: "",
+        color: "#0773E8",
+        typography: "Saira Semi Condensed",
+        text_size: "10px",
       },
       template: {
         profile: true,

@@ -12,11 +12,9 @@ import SampleTemplateTags from "../shared/SampleTemplateTags";
 import SampleTemplateWorkExperience from "../shared/SampleTemplateWorkExperience";
 
 export default function SampleTemplate({ data }) {
-  const { register, watch, control, setValue } = useForm({
+  const { register, control, setValue } = useForm({
     defaultValues: useMemo(() => data, [data])
   });
-  
-  console.log(watch());
 
   return (
     <Fragment>
