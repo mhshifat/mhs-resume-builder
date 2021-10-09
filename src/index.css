@@ -641,3 +641,66 @@ textarea {
   height: 2.5rem;
   cursor: pointer;
 }
+
+.settingsFab__templateSettings {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.toggleSwitch {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.toggleSwitch > label {
+  display: inline-block;
+  width: 3.5rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: #cacaca;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggleSwitch > label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primaryColor);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #f2f5f7;
+  transition: all 250ms ease-in-out;
+  opacity: .7;
+}
+
+.toggleSwitch__input:checked ~ .toggleSwitch__label::before {
+  transform: translateX(75%);
+  opacity: 1;
+}
+
+.settingsFab__right > h5,
+.settingsFab__left > h5 {
+  color: var(--headingColor);
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+
+.settingsFab__right > span,
+.settingsFab__left > span {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.settingsFab__right > span > div,
+.settingsFab__left > span > div {
+  margin: 0.5rem 0;
+  margin-right: .5rem;
+}
