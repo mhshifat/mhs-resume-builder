@@ -672,16 +672,15 @@ textarea {
   left: 0;
   width: 2rem;
   height: 2rem;
-  background: var(--primaryColor);
+  background: grey;
   border-radius: 50%;
   box-shadow: 0 0 0 2px #f2f5f7;
   transition: all 250ms ease-in-out;
-  opacity: .7;
 }
 
 .toggleSwitch__input:checked ~ .toggleSwitch__label::before {
   transform: translateX(75%);
-  opacity: 1;
+  background: var(--primaryColor);
 }
 
 .settingsFab__right > h5,
