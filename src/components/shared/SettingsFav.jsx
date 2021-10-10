@@ -1,3 +1,5 @@
+import * as htmlToImage from "html-to-image";
+import jsPDF from "jspdf";
 import { useCallback, useState } from "react";
 import { FaCog } from "react-icons/fa";
 import ToggleSwitch from "./ToggleSwitch";
@@ -6,6 +8,14 @@ export default function SettingsFab({ generalSettings, templateSettings }) {
   const [showFab, setShowFab] = useState(false);
   const handleGeneralSettings = useCallback((variable, value) => {
     document.querySelector(':root').style.setProperty(`--${variable}`, value);
+  }, []);
+  const downloadResumeAsPdf = useCallback(() => {
+    const docEle = document.querySelector(".buildWrapper__container");
+    htmlToImage.toJpeg(docEle).then((imgData) => {
+      const pdf = new jsPDF('p', 'pt', 'a4', false);
+      pdf.addImage(imgData, 'PNG', 0, 0, 600, 0, undefined, false);
+      pdf.save("download.pdf");
+    });
   }, []);
 
   return (
@@ -92,6 +102,11 @@ export default function SettingsFab({ generalSettings, templateSettings }) {
               <ToggleSwitch id="toggleSwitch18" /> List 2
             </span>}
           </div>
+        </div>
+        <br />
+        <h3>Action Buttons</h3>
+        <div className="settingsFab__actionButtons">
+          <button onClick={downloadResumeAsPdf}>Download</button>
         </div>
       </div>
     </div>

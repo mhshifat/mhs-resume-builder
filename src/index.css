@@ -215,6 +215,7 @@ textarea {
   font-weight: 400;
   transition: background 250ms ease-in-out;
   color: var(--headingColor);
+  width: 100%;
 }
 
 .sampleTemplateExpEdu > input {
@@ -702,4 +703,25 @@ textarea {
 .settingsFab__left > span > div {
   margin: 0.5rem 0;
   margin-right: .5rem;
+}
+
+.settingsFab__actionButtons {
+  display: flex;
+  gap: 1rem;
+  padding: .5rem 0;
+}
+
+.settingsFab__actionButtons > button {
+  border: none;
+  outline: none;
+  background: var(--primaryColor);
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.settingsFab__actionButtons > button:hover {
+  opacity: .5;
 }

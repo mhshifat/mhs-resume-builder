@@ -21,6 +21,7 @@ export default function SampleTemplate({ data }) {
       <SampleTemplateHeader register={register} />
       <br />
       <br />
+      <br />
       <div className="sampleTemplateRow">
         <div className="sampleTemplateLeft">
           <SampleTemplateProfile register={register} />
